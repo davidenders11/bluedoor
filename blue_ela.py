@@ -55,7 +55,7 @@ class ScanDelegate(DefaultDelegate):
                     id = device_id.decode("ascii")
                     if state != self.state:
                         if self.state == 1:
-                            self.count += 1
+                            self.reported_count += 1
                         self.state = state
                         print(
                             f"Device ID: {id} State: {state} Reported count: {self.reported_count} Device count: {count} Signal: {dev.rssi} Time Since State Change: {time.time() - self.t}"
