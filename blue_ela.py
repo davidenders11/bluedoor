@@ -1,17 +1,6 @@
 import sys
 import time
 
-"""
-How to use this on another tower:
-    - Copy entire folder bluedoor to tower (scp -r /home/kargo/bluedoor/ kargo@argus-000-000-0002-02:~)
-    - Activate virtual environment on that tower (source /home/kargo/bluedoor/bin/activate)
-    - Make sure bluepy is installed (pip install bluepy)
-    - Run script with sudo (sudo python /home/kargo/bluedoor/blue_ela.py)
-        - Must be run as root according to bluepy docs: https://ianharvey.github.io/bluepy-doc/scanner.html
-    - BTLEManagementError with code 17 and error "Invalid index" probably means there is no dongle on that tower
-"""
-
-
 # Add the desired path to the beginning of sys.path
 sys.path.insert(0, "/home/kargo/bluedoor/lib/python3.10/site-packages/")
 from bluepy.btle import Scanner, DefaultDelegate
