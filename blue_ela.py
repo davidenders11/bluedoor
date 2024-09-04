@@ -58,7 +58,7 @@ class ScanDelegate(DefaultDelegate):
                             self.reported_count += 1
                         self.state = state
                         print(
-                            f"Device ID: {id} State: {state} Reported count: {self.reported_count} Device count: {count} Signal: {dev.rssi} Time Since State Change: {time.time() - self.t}"
+                            f"Device ID: {id} State: {state} Reported count: {self.reported_count} Device count: {count} Difference: {count-self.reported_count} Signal: {dev.rssi} Time Since State Change: {time.time() - self.t}"
                         )
                         self.t = time.time()
 
